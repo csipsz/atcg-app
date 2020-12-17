@@ -1,9 +1,13 @@
+let complementDiv = () => document.querySelector("#complement")
+let reverseDiv = () => document.querySelector("#reverse")
+let revcompDiv = () => document.querySelector("#reverse-complement")
 
-let sequence = {}
+let sequence = []
 const handleChange = (event) => {
     event.preventDefault();
-    let key = event.target.id;
-    let value = event.target.value;
-    sequence[key] = value;
-    console.log(sequence[key]);
+    sequence = event.target.value;
+    
+    complementDiv().textContent = sequence
+    reverseDiv().textContent = sequence
+    revcompDiv().textContent = sequence
 }
