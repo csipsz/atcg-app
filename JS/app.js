@@ -1,6 +1,6 @@
-let complementDiv = () => document.querySelector("#complement")
-let reverseDiv = () => document.querySelector("#reverse")
-let revcompDiv = () => document.querySelector("#reverse-complement")
+let complementBox = () => document.querySelector("#complement")
+let reverseBox = () => document.querySelector("#reverse")
+let revCompBox = () => document.querySelector("#reverse-complement")
 
 let sequence = []
 
@@ -9,9 +9,9 @@ const handleChange = (event) => {
     sequence = event.target.value.toUpperCase();
     event.target.value = event.target.value.toUpperCase();
     
-    complementDiv().textContent = complement(sequence)
-    reverseDiv().textContent = reversing(sequence)
-    revcompDiv().textContent = complementReverse(sequence)
+    complementBox().textContent = complement(sequence)
+    reverseBox().textContent = reversing(sequence)
+    revCompBox().textContent = complementReverse(sequence)
 
     
 }
