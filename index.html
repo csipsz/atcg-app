@@ -10,14 +10,17 @@
     <h1>ATCG Converter</h1>
 
     <form id="form">
-        <label>Enter your basepairs:</label>
+        <label>ENTER YOUR SEQUENCE:</label>
         <input id="base_input" name="bases" oninput=handleChange(event)>
     </form> 
 
     <div>
-        <div id="complement" class="result">COMPLEMENT</div>
-        <div id="reverse" class="result">REVERSE</div>
-        <div id="reverse-complement" class="result">REVERSE COMPLEMENT</div>
+        <h1 class="result-header">COMPLEMENT</h1>
+        <div id="complement" class="result"></div>
+        <h1 class="result-header">REVERSE</h1>
+        <div id="reverse" class="result"></div>
+        <h1 class="result-header">REVERSE COMPLEMENT</h1>
+        <div id="reverse-complement" class="result"></div>
     </div>
 
     <script src="JS/app.js" defer></script>

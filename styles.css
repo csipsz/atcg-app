@@ -12,3 +12,26 @@ body {
     border-style: double;
 
 }
+
+.result-header {
+    color: rgb(110, 28, 241);
+    text-align:center;
+    background-color: rgb(70, 68, 68);
+    width: 280px;
+    margin-left: 600px;
+    
+}
+
+#form {
+    color: rgb(110, 28, 241);
+    text-align:center;
+    height: 150px;
+    background-color: white;
+    width: 280px;
+    border-style: double;
+}
+
+#base_input {
+    width: 240px;
+    height: 100px;
+}
