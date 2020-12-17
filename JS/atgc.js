@@ -17,13 +17,32 @@ function complement(sequence) {
             case 'N': 
                 reversed.push('N')
                 break;
+            default: 
+                reversed.push('X')
+                break;
         }
     }
     return reversed.join('')
 }
 
+
+
+
+function cleanUp(sequence){
+    let cleanedSequence = []
+    sequence.split('').forEach(function(c){
+        if (c != 'A' && c != 'T' && c != 'G' && c != 'C' && c != 'N'){
+            cleanedSequence.push('X')
+        } else {
+            cleanedSequence.push(c)
+        }
+    })
+    return cleanedSequence.join('')
+}
+
 function reversing(sequence){
-    return sequence.split("").reverse().join('')
+    let cleanSeq = cleanUp(sequence)
+    return cleanSeq.split("").reverse().join('')
  }
 
  function complementReverse(sequence){
@@ -36,8 +55,8 @@ function reversing(sequence){
 // }
 
 function GCfrequency(sequence){
-    let frequency = {'A': 0, 'T': 0, 'G': 0, 'C': 0, 'N': 0}; 
-    sequence.split('').forEach(function(base){
+    let frequency = {'A': 0, 'T': 0, 'G': 0, 'C': 0, 'N': 0, 'X': 0}; 
+    cleanUp(sequence).split('').forEach(function(base){
         frequency[base] != 0 ? frequency[base]++ : frequency[base] = 1; 
     })
     return frequency
@@ -46,6 +65,10 @@ function GCfrequency(sequence){
 function GCpercent(sequence){
     let baseHash = GCfrequency(sequence)
     let GCcount = baseHash['C'] + baseHash['G']
-    let percentage = (GCcount / (sequence.length - baseHash['N'])) * 100
-    return "The GC % is " + percentage
+    let nonVal = baseHash['N'] + baseHash['X']
+    console.log(nonVal)
+    let percentage = (GCcount / (sequence.length - (baseHash['N'] + baseHash['X']))) * 100
+    return `The GC % is ${percentage.toString().split('.')[0]}`
 }
+
+

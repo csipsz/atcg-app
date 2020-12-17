@@ -11,20 +11,20 @@
 <body>
 
     <form id="form">
-        <label>ENTER YOUR SEQUENCE:</label>
+        <label>YOUR SEQUENCE:</label>
         <input id="base_input" name="bases" oninput=handleChange(event)>
     </form> 
     <div id="percent-div">GC PERCENTAGE</div>
 
     <div>
-        <h1 class="result-header">COMPLEMENT</h1>
+        <h6 class="result-header">COMPLEMENT</h6>
         <textarea id="complement" class="result">
         </textarea>
         <i onclick="copyToClipBoard(complementBox())" class="material-icons">content_copy</i>
-        <h1 class="result-header">REVERSE</h1>
+        <h6 class="result-header">REVERSE</h6>
         <textarea id="reverse" class="result"></textarea>
         <i onclick="copyToClipBoard(reverseBox())" class="material-icons">content_copy</i>
-        <h1 class="result-header">REVERSE COMPLEMENT</h1>
+        <h6 class="result-header">REVERSE COMPLEMENT</h6>
         <textarea id="reverse-complement" class="result"></textarea>
         <i onclick="copyToClipBoard(revCompBox())" class="material-icons">content_copy</i>
     </div>
