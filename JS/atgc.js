@@ -32,3 +32,17 @@ function reversing(sequence){
 //     return reversing(complimented)
 // }
 
+function GCfrequency(sequence){
+    let frequency = {'A': 0, 'T': 0, 'G': 0, 'C': 0}; 
+    sequence.split('').forEach(function(base){
+        frequency[base] != 0 ? frequency[base]++ : frequency[base] = 1; 
+    })
+    return frequency
+}
+
+function GCpercent(sequence){
+    let baseHash = GCfrequency(sequence)
+    let GCcount = baseHash['C'] + baseHash['G']
+    let percentage = (GCcount / sequence.length) * 100
+    console.log("The percentage is " + percentage)
+}
