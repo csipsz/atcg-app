@@ -26,8 +26,6 @@ function complement(sequence) {
 }
 
 
-
-
 function cleanUp(sequence){
     let cleanedSequence = []
     sequence.split('').forEach(function(c){
@@ -68,7 +66,20 @@ function GCpercent(sequence){
     let nonVal = baseHash['N'] + baseHash['X']
     let sequenceCount = sequence.length - nonVal
     let percentage = (GCcount / sequenceCount) * 100
-    return `The GC % is ${percentage.toString().split('.')[0]}`
+    return `The GC is ${percentage.toString().split('.')[0]}%`
+}
+
+function meltingTm(sequence){
+    let meltTemp = 0
+    for (base of sequence) {
+        if (base == 'T' || base == 'A'){
+            meltTemp += 2
+        }else if (base == 'G' || base == 'C'){
+            meltTemp += 4
+        }
+    }
+    return `The approximate melting temp is ${meltTemp}`
+
 }
 
 
