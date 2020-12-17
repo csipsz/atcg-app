@@ -44,5 +44,5 @@ function GCpercent(sequence){
     let baseHash = GCfrequency(sequence)
     let GCcount = baseHash['C'] + baseHash['G']
     let percentage = (GCcount / sequence.length) * 100
-    console.log("The percentage is " + percentage)
+    return "The GC % is " + percentage
 }
