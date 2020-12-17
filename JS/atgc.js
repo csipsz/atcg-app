@@ -66,8 +66,8 @@ function GCpercent(sequence){
     let baseHash = GCfrequency(sequence)
     let GCcount = baseHash['C'] + baseHash['G']
     let nonVal = baseHash['N'] + baseHash['X']
-    console.log(nonVal)
-    let percentage = (GCcount / (sequence.length - (baseHash['N'] + baseHash['X']))) * 100
+    let sequenceCount = sequence.length - nonVal
+    let percentage = (GCcount / sequenceCount) * 100
     return `The GC % is ${percentage.toString().split('.')[0]}`
 }
 
