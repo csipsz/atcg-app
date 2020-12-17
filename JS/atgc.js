@@ -18,3 +18,16 @@ function complement(sequence) {
     }
     return reversed.join('')
 }
+
+function reversing(sequence){
+    return sequence.split("").reverse().join('')
+ }
+
+ function complementReverse(sequence){
+     return complement(reversing(sequence))
+ }
+
+//  function complementReverse(sequence){
+//     let complemented = complement(sequence)
+//     return reversing(complimented)
+// }

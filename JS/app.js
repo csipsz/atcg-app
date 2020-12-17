@@ -11,13 +11,11 @@ const handleChange = (event) => {
     
     complementDiv().textContent = complement(sequence)
     reverseDiv().textContent = reversing(sequence)
-    revcompDiv().textContent = sequence
+    revcompDiv().textContent = complementReverse(sequence)
 
     
 }
 
 
-function reversing(sequence){
-   return sequence.split("").reverse().join('')
-}
+
 
