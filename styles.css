@@ -19,16 +19,22 @@ body {
     
 }
 
-#form {
+.form {
     color: rgb(110, 28, 241);
     text-align:center;
-    height: 150px;
+    height: 130px;
     background-color: white;
     width: 280px;
     border-style: double;
 }
 
-#base_input {
+.base_input {
     width: 240px;
     height: 100px;
+}
+
+#second-column {
+    margin-left: 350px;
+    position: absolute;
+    top: 10px;
 }
