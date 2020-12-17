@@ -1,3 +1,14 @@
 body {
-    background-color: aqua;
+    background-color: rgb(206, 211, 211);
+}
+
+.result {
+    color: rgb(110, 28, 241);
+    text-align:center;
+    height: 150px;
+    background-color: white;
+    width: 280px;
+    margin-left: 600px;
+    border-style: double;
+
 }
