@@ -14,6 +14,9 @@ function complement(sequence) {
             case 'G': 
                 reversed.push('C') 
                 break;
+            case 'N': 
+                reversed.push('N')
+                break;
         }
     }
     return reversed.join('')
@@ -33,7 +36,7 @@ function reversing(sequence){
 // }
 
 function GCfrequency(sequence){
-    let frequency = {'A': 0, 'T': 0, 'G': 0, 'C': 0}; 
+    let frequency = {'A': 0, 'T': 0, 'G': 0, 'C': 0, 'N': 0}; 
     sequence.split('').forEach(function(base){
         frequency[base] != 0 ? frequency[base]++ : frequency[base] = 1; 
     })
@@ -43,6 +46,6 @@ function GCfrequency(sequence){
 function GCpercent(sequence){
     let baseHash = GCfrequency(sequence)
     let GCcount = baseHash['C'] + baseHash['G']
-    let percentage = (GCcount / sequence.length) * 100
+    let percentage = (GCcount / (sequence.length - baseHash['N'])) * 100
     return "The GC % is " + percentage
 }
