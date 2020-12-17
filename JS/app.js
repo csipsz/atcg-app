@@ -6,6 +6,7 @@ let sequence = []
 const handleChange = (event) => {
     event.preventDefault();
     sequence = event.target.value.toUpperCase();
+    event.target.value = event.target.value.toUpperCase();
     
     complementDiv().textContent = complement(sequence)
     reverseDiv().textContent = sequence
