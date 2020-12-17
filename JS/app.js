@@ -11,10 +11,26 @@ const handleChange = (event) => {
     
     complementBox().textContent = complement(sequence)
     reverseBox().textContent = reversing(sequence)
-    revCompBox().textContent = complementReverse(sequence)
-
-    
+    revCompBox().textContent = complementReverse(sequence)  
 }
+// complementBox().addEventListener("click", function(event){
+//     console.log(event.target.value)
+//     copyToClipBoard(event.target)
+// })
+
+// function copyToClipBoard(element){
+//     element.select(); 
+//     document.execCommand("Copy")
+// }
+
+
+/////////////////////////////////////////////////////////////
+
+function copyToClipBoard(element){
+    element.select(); 
+    document.execCommand("Copy")
+}
+
 
 
 

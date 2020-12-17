@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRAXIS ATCG</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,11 +18,15 @@
 
     <div>
         <h1 class="result-header">COMPLEMENT</h1>
-        <textarea id="complement" class="result"></textarea>
+        <textarea id="complement" class="result">
+        </textarea>
+        <i onclick="copyToClipBoard(complementBox())" class="material-icons">content_copy</i>
         <h1 class="result-header">REVERSE</h1>
         <textarea id="reverse" class="result"></textarea>
+        <i onclick="copyToClipBoard(reverseBox())" class="material-icons">content_copy</i>
         <h1 class="result-header">REVERSE COMPLEMENT</h1>
         <textarea id="reverse-complement" class="result"></textarea>
+        <i onclick="copyToClipBoard(revCompBox())" class="material-icons">content_copy</i>
     </div>
 
     <script src="JS/atgc.js" defer></script>
