@@ -1,8 +1,6 @@
 body {
     background-color: rgb(206, 211, 211);
-    font-family:monospace
-    
-    
+    font-family:monospace  
 }
 
 .result {
@@ -11,7 +9,6 @@ body {
     height: 100px;
     background-color: white;
     width: 280px;
-
 }
 
 .result-header {
@@ -20,7 +17,6 @@ body {
     text-align:center;
     width: 280px;
     font-size: 10px;
-    
 }
 
 .form {
