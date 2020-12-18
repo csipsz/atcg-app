@@ -35,26 +35,26 @@
     <div id="second-column">
         <form class="form">
             <label>YOUR SEQUENCE:</label>
-            <input class="base_input" name="bases" oninput=handleChange(event)>
+            <input class="base_input" name="bases" oninput=handleChange2(event)>
         </form> 
-        <div id="percent-div">GC PERCENTAGE</div>
-        <div id="melting-div">APPROXIMATE Tm</div>
+        <div id="percent-div2">GC PERCENTAGE</div>
+        <div id="melting-div2">APPROXIMATE Tm</div>
     
         <div>
             <h6 class="result-header">COMPLEMENT</h6>
-            <textarea id="complement" class="result">
+            <textarea id="complement2" class="result">
             </textarea>
-            <i onclick="copyToClipBoard(complementBox())" class="material-icons">content_copy</i>
+            <i onclick="copyToClipBoard(complementBox2())" class="material-icons">content_copy</i>
             <h6 class="result-header">REVERSE</h6>
-            <textarea id="reverse" class="result"></textarea>
-            <i onclick="copyToClipBoard(reverseBox())" class="material-icons">content_copy</i>
+            <textarea id="reverse2" class="result"></textarea>
+            <i onclick="copyToClipBoard(reverseBox2())" class="material-icons">content_copy</i>
             <h6 class="result-header">REVERSE COMPLEMENT</h6>
-            <textarea id="reverse-complement" class="result"></textarea>
-            <i onclick="copyToClipBoard(revCompBox())" class="material-icons">content_copy</i>
+            <textarea id="reverse-complement2" class="result"></textarea>
+            <i onclick="copyToClipBoard(revCompBox2())" class="material-icons">content_copy</i>
         </div>
         </div>
     
-
+    <script src="JS/selectors.js" defer></script>
     <script src="JS/atgc.js" defer></script>
     <script src="JS/app.js" defer></script>
 </body>

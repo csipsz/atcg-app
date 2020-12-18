@@ -1,13 +1,7 @@
-let complementBox = () => document.querySelector("#complement")
-let reverseBox = () => document.querySelector("#reverse")
-let revCompBox = () => document.querySelector("#reverse-complement")
-let percentDiv = () => document.querySelector('#percent-div')
-let meltingDiv = () => document.querySelector('#melting-div')
-
 let sequence = []
+//let sequence2 = []
 
 const handleChange = (event) => {
-    //event.preventDefault();
     sequence = event.target.value.toUpperCase();
     event.target.value = event.target.value.toUpperCase();
 
@@ -17,18 +11,17 @@ const handleChange = (event) => {
     percentDiv().textContent = GCpercent(sequence)
     meltingDiv().textContent = meltingTm(sequence)
 }
-// complementBox().addEventListener("click", function(event){
-//     console.log(event.target.value)
-//     copyToClipBoard(event.target)
-// })
 
-// function copyToClipBoard(element){
-//     element.select(); 
-//     document.execCommand("Copy")
-// }
+const handleChange2 = (event) => {
+    sequence2 = event.target.value.toUpperCase();
+    event.target.value = event.target.value.toUpperCase();
 
-
-/////////////////////////////////////////////////////////////
+    complementBox2().textContent = complement(sequence2)
+    reverseBox2().textContent = reversing(sequence2)
+    revCompBox2().textContent = complementReverse(sequence2)  
+    percentDiv2().textContent = GCpercent(sequence2)
+    meltingDiv2().textContent = meltingTm(sequence2)
+}
 
 function copyToClipBoard(element){
     element.select(); 
