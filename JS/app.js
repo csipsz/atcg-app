@@ -32,8 +32,6 @@ function copyToClipBoard(element){
 }
 
 
-//try to commit 
-
 
 
 

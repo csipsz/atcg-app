@@ -12,9 +12,10 @@
 
 
     <div>
-        <form class="form">
+        <form autoComplete="off" class="form" >
             <label>SEQUENCE:</label>
-            <input class="base_input" name="bases" oninput=handleChange(event)>
+            <input id="base-input1" class="base_input" name="bases" oninput=handleChange(event)>
+            <i onclick="copyToClipBoard(baseInput())" class="material-icons">content_copy</i>
         </form> 
         <div id="sequence-length">Sequence Length</div>
         <div id="percent-div">GC%</div>
@@ -33,9 +34,10 @@
     </div>
 
     <div id="second-column">
-        <form class="form">
+        <form autoComplete="off" class="form">
             <label>SEQUENCE:</label>
-            <input class="base_input" name="bases" oninput=handleChange2(event)>
+            <input id="base-input2" class="base_input" name="bases" oninput=handleChange2(event)>
+            <i onclick="copyToClipBoard(baseInput2())" class="material-icons">content_copy</i>
         </form> 
         <div id="sequence-length2">Sequence Length</div>
         <div id="percent-div2">GC%</div>
