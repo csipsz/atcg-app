@@ -1,6 +1,3 @@
-//let sequence = []
-//let sequence2 = []
-
 const handleChange = (event) => {
     let sequence = event.target.value.toUpperCase();
     event.target.value = event.target.value.toUpperCase();
@@ -30,11 +27,3 @@ function copyToClipBoard(element){
     element.select(); 
     document.execCommand("Copy")
 }
-
-
-
-
-
-
-
-

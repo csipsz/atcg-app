@@ -79,5 +79,3 @@ function meltingTm(sequence){
 function sequenceLength(sequence){
     return `Sequence Length: ${sequence.length}`
 }
-
-
