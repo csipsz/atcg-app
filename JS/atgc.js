@@ -47,11 +47,6 @@ function reversing(sequence){
      return complement(reversing(sequence))
  }
 
-//  function complementReverse(sequence){
-//     let complemented = complement(sequence)
-//     return reversing(complimented)
-// }
-
 function GCfrequency(sequence){
     let frequency = {'A': 0, 'T': 0, 'G': 0, 'C': 0, 'N': 0, 'X': 0}; 
     cleanUp(sequence).split('').forEach(function(base){
@@ -66,7 +61,7 @@ function GCpercent(sequence){
     let nonVal = baseHash['N'] + baseHash['X']
     let sequenceCount = sequence.length - nonVal
     let percentage = (GCcount / sequenceCount) * 100
-    return `The GC is ${percentage.toString().split('.')[0]}%`
+    return `GC %: ${percentage.toString().split('.')[0]}`
 }
 
 function meltingTm(sequence){
@@ -78,8 +73,11 @@ function meltingTm(sequence){
             meltTemp += 4
         }
     }
-    return `The approximate melting temp is ${meltTemp}`
+    return `Tm: ${meltTemp}`
+}
 
+function sequenceLength(sequence){
+    return `Sequence Length: ${sequence.length}`
 }
 
 
