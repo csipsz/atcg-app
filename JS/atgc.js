@@ -79,3 +79,28 @@ function meltingTm(sequence){
 function sequenceLength(sequence){
     return `Sequence Length: ${sequence.length}`
 }
+
+const handleEquation = () => {
+    let fmol = document.querySelector("#fmol").value
+    let ng = document.querySelector("#ng").value
+    let bp = document.querySelector("#bp").value
+
+    if (fmol === "" && ng === "" || bp === "" && ng === "" || fmol === "" && bp === "" ) {
+        return "Missing field"
+    }
+
+    if (fmol === "") {
+        fmol = (ng * 1000000) / (bp * 660)
+        return `Fmol result: ${Number(fmol).toFixed(2)}`
+    } 
+
+    if (bp === "") {
+        bp = (ng * 1000000) / (fmol * 660)
+        return `Bp result: ${Number(bp).toFixed(2)}`
+    }
+
+    if (ng === "") {
+        ng = (bp * fmol * 660) / 1000000
+        return `Ng result: ${Number(ng).toFixed(2)}`
+    }
+}

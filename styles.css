@@ -38,3 +38,9 @@ body {
     position: absolute;
     top: 10px;
 }
+
+.button {
+    color: rgb(110, 28, 241);
+    margin-bottom: 10px;
+
+}

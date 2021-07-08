@@ -27,3 +27,16 @@ function copyToClipBoard(element){
     element.select(); 
     document.execCommand("Copy")
 }
+
+calculateButton().addEventListener("click", function(){ 
+    let span = document.querySelector('#span')
+    span.innerHTML = ''
+    equationResult().innerHTML = ''
+    let equationRes = handleEquation()
+    let resultArray =  equationRes.split(' ')
+    span.textContent = `${resultArray[0]} ${resultArray[1]}`
+    equationResult().textContent = `${resultArray[resultArray.length - 1] != "field" ? resultArray[resultArray.length - 1] : ""}`
+
+ })
+
+

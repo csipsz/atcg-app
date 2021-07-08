@@ -13,3 +13,6 @@ let percentDiv2 = () => document.querySelector('#percent-div2')
 let meltingDiv2 = () => document.querySelector('#melting-div2')
 let lengthDiv2 = () => document.querySelector('#sequence-length2')
 let baseInput2 = () =>document.querySelector('#base-input2')
+
+let calculateButton = () => document.querySelector('#calculate')
+let equationResult = () => document.querySelector('#eq-result')
